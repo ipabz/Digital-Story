@@ -1,0 +1,9 @@
+				<br /><br />
+            </div>
+        </div>
+        <div id="footer"> <br /> 
+        	&copy; <?=date('Y');?>. All Rights Reserved
+        </div>
+    </div>
+</body>
+</html>
