@@ -10,7 +10,7 @@
 |
 */
 
-$hook['post_controller_constructor'] = array(
+$hook['pre_controller'] = array(
                                 'class'    => 'Language_handler',
                                 'function' => 'change',
                                 'filename' => 'language_handler.php',

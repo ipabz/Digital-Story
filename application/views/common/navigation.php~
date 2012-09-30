@@ -23,13 +23,8 @@
 	<div style="float: right;width: 300px;text-align:right; position:relative; top: -7px;">
     	<?php
 			  	
-			$langtemp = directory_map(dirname(BASEPATH).'/application/language', TRUE);
+			$languages = directory_map(dirname(BASEPATH).'/application/language', TRUE);
 			
-			$languages = array();
-			
-			foreach($langtemp as $language) {
-				$languages[$language] = ucfirst($language);	
-			}
     		
     		print form_open(current_url(), 'name="lang_form"');
     		print form_dropdown('language', $languages, $this->session->userdata('language'), 'style="padding: 5px;" onclick="document.lang_form.submit()"');

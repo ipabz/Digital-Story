@@ -2,7 +2,7 @@
             </div>
         </div>
         <div id="footer"> <br /> 
-        	&copy; <?=@date('Y');?>. <?=lang('allrightsreserved_label')?>
+        	&copy; <?=@date('Y');?>. All Rights Reserved
         </div>
     </div>
 </body>

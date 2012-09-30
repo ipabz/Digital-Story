@@ -24,7 +24,7 @@
         	<div class="mod2">
             	<div class="inner-mod2">
                 	<div class="mod2-title">
-                    	<?=lang('most_popular_label')?>
+                    	Most Popular Stories
                     </div>
                     <br />
                     <?php $this->load->view('top-10'); ?>

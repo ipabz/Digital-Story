@@ -24,7 +24,7 @@
     
     <div align="right">
     	
-    	<input class="read-more-button" style="cursor: pointer" type="button" onclick="window.location='<?=site_url('stories')?>'" value="<?=lang('show_more_label')?>" />
+    	<input class="read-more-button" style="cursor: pointer" type="button" onclick="window.location='<?=site_url('stories')?>'" value="<?=lang('home_label')?>" />
        
     </div>
 </div>

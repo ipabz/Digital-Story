@@ -39,7 +39,7 @@ class Security_handler extends CI_Model {
 	}
 	
 	function language() {
-		print 123;	
+			
 	}
 	
 }

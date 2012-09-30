@@ -67,7 +67,7 @@ class Story_handler extends CI_Model {
 		
 		$data = array(
 			'story_id' => $story_id,
-			'date_viewed' => @date('Y-m-d H:i:s')
+			'date_viewed' => date('Y-m-d H:i:s')
 		);
 		
 		$this->db->insert(VIEWS_TABLE, $data);
