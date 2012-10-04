@@ -4,32 +4,85 @@
        
         <div class="story-read-content" style="background: #fff;">
         	 <div class="story-read-title">
-				<?=$story->title?>
+                 <?php
+                
+                    if ($this->session->userdata('language') == 'tagalog') {
+                        print $story->tagalog_title;
+                    } else {
+
+                        print $story->english_title;
+                    }
+
+                ?>
             </div>
             <div>
             	
-                <?php if ($story->video) { ?>
-                <div>
-                	<?=lang('watch_label')?>
-                </div>
-                <video controls width="400">
-                    <source src="<?=base_url()?>assets/uploads/video/<?=$story->video?>" />
-                </video>
-                <?php } ?>
+                <?php 
+                if ($this->session->userdata('language') == 'tagalog') {
+                    if ($story->tagalog_video) { 
+                    ?>
+                    <div>
+                        <?=lang('watch_label')?>
+                    </div>
+                    <video controls width="400">
+                        <source src="<?=base_url()?>assets/uploads/video/<?=$story->tagalog_video?>" />
+                    </video>
+                    <?php 
+                    } 
+                } else {
+                    if ($story->english_video) { 
+                    ?>
+                    <div>
+                        <?=lang('watch_label')?>
+                    </div>
+                    <video controls width="400">
+                        <source src="<?=base_url()?>assets/uploads/video/<?=$story->english_video?>" />
+                    </video>
+                    <?php 
+                    } 
+                }
+                ?>
             </div>
             <br />
             <div>
-            <?=$story->contents?>
+            <?php
+                
+                if ($this->session->userdata('language') == 'tagalog') {
+                    print $story->tagalog_contents;
+                } else {
+
+                    print $story->english_contents;
+                }
+
+            ?>
             </div>
-			<?php if ($story->audio) { ?>
-            	<div>
-                	<?=lang('listen_label')?>
-                </div>
-                <audio id="drums" controls>
-                    <source src="<?=base_url()?>assets/uploads/audio/<?=$story->audio?>" type="audio/ogg">
-                </audio>
-                <br /><br />
-                <?php } ?>
+			<?php 
+            if ($this->session->userdata('language') == 'tagalog') {
+                if ($story->tagalog_audio) { ?>
+                    <div>
+                        <?=lang('listen_label')?>
+                    </div>
+                    <audio id="drums" controls>
+                        <source src="<?=base_url()?>assets/uploads/audio/<?=$story->tagalog_audio?>" type="audio/ogg">
+                    </audio>
+                    <br /><br />
+                    <?php 
+
+                } 
+            } else {
+                if ($story->english_audio) { ?>
+                    <div>
+                        <?=lang('listen_label')?>
+                    </div>
+                    <audio id="drums" controls>
+                        <source src="<?=base_url()?>assets/uploads/audio/<?=$story->english_audio?>" type="audio/ogg">
+                    </audio>
+                    <br /><br />
+                    <?php 
+
+                } 
+
+            } ?>
         </div>
     </div>
 </div>

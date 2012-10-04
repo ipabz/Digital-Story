@@ -10,7 +10,7 @@ class Language_handler {
 				
 				if ($this->CI->input->post('language')) {
 					$this->CI->session->set_userdata('language', $this->CI->input->post('language'));
-				}				
+				}			
 				
 				
 				$sessionLang = $this->CI->session->userdata('language');

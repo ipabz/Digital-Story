@@ -9,10 +9,27 @@
 		?>
         <div>
         	<div class="story-title2">
-            	<?=$count.'. <a href="'.site_url('stories/read/'.$row->stories_id).'">'.ucwords($row->title).'</a>'?>
+                <?php
+                if ($this->session->userdata('language') == 'tagalog') {
+                    $title = $row->tagalog_title;
+                } else {
+
+                    $title = $row->english_title;
+                }
+                ?>
+            	<?=$count.'. <a href="'.site_url('stories/read/'.$row->stories_id).'">'.ucwords($title).'</a>'?>
             </div>
             <div class="story-content2">
-            	<?=substr($row->contents, 0, 190)?>...
+            	<?php
+                
+                    if ($this->session->userdata('language') == 'tagalog') {
+                        print substr($row->tagalog_contents, 0, 190);
+                    } else {
+                
+                        print substr($row->english_contents, 0, 190);
+                    }
+                            
+                ?>...
             </div>
         </div>
         <br />
@@ -23,6 +40,6 @@
 	?>
     
     <div align="right">
-    	<input class="read-more-button" style="cursor: pointer" type="button" onclick="window.location='<?=site_url('stories/most_popular')?>'" value="show more" />
+    	<input class="read-more-button" style="cursor: pointer" type="button" onclick="window.location='<?=site_url('stories/most_popular')?>'" value="<?=lang('show_more_label')?>" />
     </div>
 </div>

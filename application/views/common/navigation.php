@@ -30,9 +30,15 @@
 			foreach($langtemp as $language) {
 				$languages[$language] = ucfirst($language);	
 			}
+            
+            if ($this->session->userdata('language')) {
+                $langC = $this->session->userdata('language');
+            } else {
+                $langC = 'english';
+            }
     		
     		print form_open(current_url(), 'name="lang_form"');
-    		print form_dropdown('language', $languages, $this->session->userdata('language'), 'style="padding: 5px;" onclick="document.lang_form.submit()"');
+    		print form_dropdown('language', $languages, $langC, 'style="padding: 5px;" onclick="document.lang_form.submit()"');
     		print form_close();
     	?>
     </div>

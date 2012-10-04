@@ -99,9 +99,16 @@ class Stories extends CI_Controller {
 		}
 		
 		$this->story_handler->view($story_id);
+        
+         if ($this->session->userdata('language') == 'tagalog') {
+            $title = $story->tagalog_title;
+        } else {
+
+            $title = $story->english_title;
+        }
 		
 		$data = array(
-			'page_title' => APP_NAME . ' | ' . $story->title,
+			'page_title' => APP_NAME . ' | ' . $title,
 			'story' => $story
 		);
 		

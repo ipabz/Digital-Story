@@ -21,9 +21,10 @@ class Stories extends CI_Controller {
 			$crud->set_table(STORIES_TABLE);
 			$crud->set_subject('Stories');
 			$crud->required_fields('title', 'contents');
-			$crud->set_field_upload('audio', 'assets/uploads/audio');
-			$crud->set_field_upload('video', 'assets/uploads/video');
-			//$crud->callback_upload(array($this, 'upload_callback'));
+			$crud->set_field_upload('english_audio', 'assets/uploads/audio');
+			$crud->set_field_upload('english_video', 'assets/uploads/video');
+            $crud->set_field_upload('tagalog_audio', 'assets/uploads/audio');
+			$crud->set_field_upload('tagalog_video', 'assets/uploads/video');
 			$output = $crud->render();
 			
 			$this->__output($output);
@@ -33,35 +34,6 @@ class Stories extends CI_Controller {
 		}
 		
 		//$this->__output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
-	}
-	
-	function upload_callback($files_to_upload,$field_info) {
-	
-		//-------------------traces log-------------------------------------------------------------------
-			
-			$files = array();
-			foreach($files_to_upload as $key => $val) {
-				foreach($val as $k => $v) {
-					$temp .= "------> $k = $v";
-				}
-				$files = $val;
-			}
-			
-			$this->load->helper('file');
-			write_file(dirname(__FILE__).'/error.txt', $temp);
-			
-			
-			move_uploaded_file($files, dirname(__FILE__));
-	
-		if(is_dir($field_info->upload_path))
-		{
-			return true;
-		}
-		else
-		{
-			return 'I am sorry but it seems that the folder that you are trying to upload doesn\'t exist.';    
-		}
-		
 	}
 	
 	function __output($output = NULL) {

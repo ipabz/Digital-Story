@@ -83,14 +83,24 @@ class Story_handler extends CI_Model {
 				".STORIES_TABLE."
 			WHERE
 				(
-					title LIKE '%$keyword' OR
-					title LIKE '%$keyword%' OR
-					title LIKE '$keyword%'
+					english_title LIKE '%$keyword' OR
+					english_title LIKE '%$keyword%' OR
+					english_title LIKE '$keyword%'
+				) OR
+                (
+					tagalog_title LIKE '%$keyword' OR
+					tagalog_title LIKE '%$keyword%' OR
+					tagalog_title LIKE '$keyword%'
 				) OR
 				(
-					contents LIKE '%$keyword' OR
-					contents LIKE '%$keyword%' OR
-					contents LIKE '$keyword%'
+					english_contents LIKE '%$keyword' OR
+					english_contents LIKE '%$keyword%' OR
+					english_contents LIKE '$keyword%'
+				) OR
+				(
+					tagalog_contents LIKE '%$keyword' OR
+					tagalog_contents LIKE '%$keyword%' OR
+					tagalog_contents LIKE '$keyword%'
 				)
 		";
 		
