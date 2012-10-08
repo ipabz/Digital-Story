@@ -38,7 +38,7 @@
             }
     		
     		print form_open(current_url(), 'name="lang_form"');
-    		print form_dropdown('language', $languages, $langC, 'style="padding: 5px;" onclick="document.lang_form.submit()"');
+    		print form_dropdown('language', $languages, $langC, 'style="padding: 5px;" onchange="document.lang_form.submit()"');
     		print form_close();
     	?>
     </div>
