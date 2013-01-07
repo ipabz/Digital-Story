@@ -18,7 +18,7 @@
             <div>
             	
                 <?php 
-                if ($this->session->userdata('language') == 'tagalog') {
+                if ($this->session->userdata('language') == 'tagalog' OR $lang == 'fil') {
                     if ($story->tagalog_video) { 
                     ?>
                     <div>
@@ -38,6 +38,9 @@
                     <video controls width="400">
                         <source src="<?=base_url()?>assets/uploads/video/<?=$story->english_video?>" />
                     </video>
+                    <div style="padding: 5px;">
+                        <a href="<?php print site_url('stories/read/'.$story->stories_id.'/fil'); ?>"><?php print lang('view_tagalog_version'); ?></a>
+                    </div>
                     <?php 
                     } 
                 }

@@ -10,5 +10,7 @@
 	$lang['listen_label'] = 'Listen to Audio';
 	$lang['search_results_label'] = 'Search results for';
 	$lang['allrightsreserved_label'] = 'All rights reserved';
+	$lang['view_tagalog_version'] = 'View Tagalog Version';
+	$lang['view_english_version'] = 'Panoorin ang English Version';
 
 ?>

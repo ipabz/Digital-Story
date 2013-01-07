@@ -86,7 +86,7 @@ class Stories extends CI_Controller {
 	
 	}
 	
-	function read($story_id) {
+	function read($story_id,$lang='') {
 		
 		if ($story_id == '') {
 			exit('Forbidden Access!');
@@ -99,7 +99,7 @@ class Stories extends CI_Controller {
 		}
 		
 		$this->story_handler->view($story_id);
-        
+		
          if ($this->session->userdata('language') == 'tagalog') {
             $title = $story->tagalog_title;
         } else {
@@ -109,7 +109,8 @@ class Stories extends CI_Controller {
 		
 		$data = array(
 			'page_title' => APP_NAME . ' | ' . $title,
-			'story' => $story
+			'story' => $story,
+			'lang' => $lang
 		);
 		
 		$this->load->view('common/header', $data);
