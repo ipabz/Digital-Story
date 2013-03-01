@@ -37,8 +37,8 @@ $(window).load(function() {
 			animSpeed: 500, // Slide transition speed
 			pauseTime: 3000, // How long each slide will show
 			startSlide: 4, // Set starting Slide (0 index)
-			directionNav: false, // Next & Prev navigation
-			directionNavHide: false, // Only show on hover
+			directionNav: true, // Next & Prev navigation
+			directionNavHide: true, // Only show on hover
 			controlNav: false, // 1,2,3... navigation
 			controlNavThumbs: false, // Use thumbnails for Control Nav
 			controlNavThumbsFromRel: false, // Use image rel for thumbs
@@ -70,11 +70,10 @@ $(window).load(function() {
         	<div class="cont-2">
             
                 <div id="header">
-                    <a style="float: left;" title="<?=APP_NAME?>" href="<?=site_url('/home')?>">
-                        <img src="<?=base_url()?>images/site-name.fw.png" />
-                    </a>
+                    
                     
                     <div class="slider-wrapper theme-default slid">
+                    	
                         <div id="slider" class="nivoSlider">
                             <img src="<?=base_url()?>nivo-slider/demo/images/toystory.jpg" data-thumb="<?=base_url()?>nivo-slider/demo/images/toystory.jpg" alt="" />
                             <img src="<?=base_url()?>nivo-slider/demo/images/up.jpg" data-thumb="images/up.jpg" alt="" title="" />
@@ -83,4 +82,5 @@ $(window).load(function() {
                         </div>
                        
                     </div>
+                    
                 </div>

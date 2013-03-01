@@ -1,4 +1,6 @@
 <div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span id="site-title">Digital Story</span>
 <?php
 	$menu = $this->uri->segment(1);
 	?>
@@ -15,12 +17,12 @@
     
     
     
-    <div style="float: right;width: 300px;text-align:right; position:relative; top: -7px;">
+    <div style="float: right;width: 300px;text-align:right; position:relative; top: -7px; margin-right: 80px;">
     	<?=form_open('stories/search')?>
     	<input class="search-field" size="45" type="text" name="search" placeholder="<?=lang('search_field_placeholder_label')?>" />
         <?=form_close()?>
 	</div> 
-	<div style="float: right;width: 300px;text-align:right; position:relative; top: -7px;">
+	<div style="width: 300px;text-align:right; position:relative; top: -29px;">
     	<?php
 			  	
 			$langtemp = directory_map(dirname(BASEPATH).'/application/language', TRUE);

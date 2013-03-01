@@ -1,6 +1,5 @@
 <div class="left-container">
-	
-    <br /><br /><br />
+
     <div class="p1">
        <div class="mod2">
             <div class="inner-mod2">

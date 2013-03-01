@@ -1,6 +1,6 @@
-<br class="clear" />
-<br /><br /><br />
-<div align="center" style="cursor: pointer" class="mod3 featured" onclick="window.location='<?=site_url('stories')?>'">
+
+
+<div align="center" style="cursor: pointer;" class="mod3 featured" onclick="window.location='<?=site_url('stories')?>'">
 	<img src="<?=base_url()?>images/featured.fw.png" />
 </div>
 <br />

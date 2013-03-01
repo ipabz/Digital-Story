@@ -2,9 +2,7 @@ body {
 	margin: 0px;
 	font-family:"Calibri";
 	font-size: 1em;	
-	background-repeat: repeat-x;
-	background-color: #F8F8F8;
-	background-position: top;
+	background: #4f3220 url(../images/footer-1.png);
 }
 
 #wrapper {
@@ -15,7 +13,13 @@ body {
 }
 
 #header {
-	padding: 25px 20px 0px 20px;
+	padding: 0px 0px 0px 0px;
+}
+
+#site-title {
+	font-size: 18px;
+	color: #fff;
+	margin-right: 40px;
 }
 
 .mytable {
@@ -32,7 +36,8 @@ body {
 	width: 970px;
 	padding-left: 20px;
 	padding-right: 20px;
-	z-index: 100px;
+	z-index: 700px;
+	
 }
 
 .selected-menu {
@@ -54,34 +59,42 @@ body {
 }
 
 #main {
+	background: #ffc;
+	position: relative;
+	top: -32px;
 	background: #6FB807 url(../images/body-top.png) repeat-x;
 	
 }
 
+.slid2 {
+	background: #F5F5F5;
+	border: 10px solid #000;
+	}
+	
 .slid {
 	background: #F5F5F5;
-	padding: 10px;
-	border-radius: 8px;
-	border: 1px solid #ccc;
-	float: right;
-	width: 500px;
-	height: 204px;
-}
+	}
 
-.slid img {
-	border: 1px solid #ccc;
-}
+
 
 .cont-2 {
 	margin: 0px auto;
 	width: 970px;
+	border-left: 1px solid #1e3d3d;
+	border-right: 1px solid #1e3d3d;
+	box-shadow: 0px 0px 30px #000;
+	-moz-box-shadow: 0px 0px 30px #000;
+	-webkit-box-shadow: 0px 0px 30px #000;
+	background: #fff;
 }
 
 #footer {
-	background: url(../images/footer-1.png) repeat-x;
+	/*background: #4f3220 url(../images/footer-1.png) repeat-x;*/
 	height: 80px;
 	color: #ccc;
 	text-align:center;
+	position: relative;
+	top: -32px;
 }
 
 a {
@@ -159,6 +172,9 @@ a {
 	max-height: 1524px;
 	overflow: auto;
 	background: #ffffff;
+	box-shadow: 3px 5px 10px #000;
+	-moz-box-shadow: 3px 5px 10px #000;
+	-webkit-box-shadow: 3px 5px 10px #000;
 }
 
 /*mod1-----------------------------------------------------*/
@@ -232,6 +248,7 @@ a {
 
 .p1 {
 	padding: 15px;	
+	
 }
 
 .search-field {

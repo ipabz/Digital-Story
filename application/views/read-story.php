@@ -1,5 +1,5 @@
 <div class="left-container">
-	<br /><br /><br />
+
     <div class="p1">
        
         <div class="story-read-content" style="background: #fff;">
@@ -90,7 +90,7 @@
     </div>
 </div>
 
-<div class="right-container"><br /><br /><br />
+<div class="right-container">
 	<div class="mod1">
             	<div class="inner-mod1">
                 	<div class="mod1-title">
