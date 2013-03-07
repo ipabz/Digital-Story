@@ -4025,10 +4025,10 @@ class UploadHandler
             'param_name' => 'files',
             // The php.ini settings upload_max_filesize and post_max_size
             // take precedence over the following max_file_size setting:
-            'max_file_size' => null,
+            'max_file_size' => NULL,
             'min_file_size' => 1,
             'accept_file_types' => '/.+$/i',
-            'max_number_of_files' => null,
+            'max_number_of_files' => NULL,
             // Set the following option to false to enable non-multipart uploads:
             'discard_aborted_uploads' => true,
             // Set to true to rotate images based on EXIF meta data, if available:
@@ -4155,7 +4155,7 @@ class UploadHandler
     }
     
     private function has_error($uploaded_file, $file, $error) {
-        if ($error) {
+        if ($error && false) {
             return $error;
         }
         if (!preg_match($this->options['accept_file_types'], $file->name)) {
