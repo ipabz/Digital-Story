@@ -36,12 +36,12 @@
             if ($this->session->userdata('language')) {
                 $langC = $this->session->userdata('language');
             } else {
-                $langC = 'english';
+                $langC = 'tagalog';
             }
     		
-    		print form_open(current_url(), 'name="lang_form"');
-    		print form_dropdown('language', $languages, $langC, 'style="padding: 5px;" onchange="document.lang_form.submit()"');
-    		print form_close();
+    		//print form_open(current_url(), 'name="lang_form"');
+    		//print form_dropdown('language', $languages, $langC, 'style="padding: 5px;" onchange="document.lang_form.submit()"');
+    		//print form_close();
     	?>
     </div>
 </div>
